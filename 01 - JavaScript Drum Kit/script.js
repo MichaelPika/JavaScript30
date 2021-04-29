@@ -29,12 +29,12 @@ let clearPlayArr = () => {
 };
 
 let playSoundAll = (num, recordPlayArr) => {
-	let firstmus = num;
+	let firstsound = num;
 	let audioRecord = document.querySelector(
-		`audio[data-key="${recordPlayArr[firstmus]}"]`
+		`audio[data-key="${recordPlayArr[firstsound]}"]`
 	);
 	audioRecord.play();
-	num = firstmus + 1;
+	num = firstsound + 1;
 	audioRecord.onended = function () {
 		playSoundAll(num, recordPlayArr);
 	};
