@@ -12,23 +12,24 @@ html {
 }
 .buttonControl {
 	position: absolute;
-	bottom: 180px;
+	bottom: 150px;
 	left: 550px;
 }
 button {
-	width: 80px;
-	height: 30px;
-	border-radius: 50%;
+	width: 100px;
+	height: 40px;
+	border-radius: 10%;
 	margin: 0px 20px;
-	font-size: 20px;
-	color: white;
+	font-size: 25px;
+	color: black;
 	outline: none;
 }
-.buttonPlay {
-	background-color: red;
+.buttonPlay, .buttonClear {
+	background-color: white;
 }
-.buttonClear {
-	background-color: black;
+.buttonPlay:hover, .buttonClear:hover {
+	background-color: green;
+  color: white;
 }
 .keys {
 	display: flex;

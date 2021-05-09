@@ -1,13 +1,18 @@
 let recordPlayArr = [];
-
-const record = document.getElementById("buttonPlay");
-const clearSound = document.getElementById("buttonClear");
+let stopRecord = 0;
+let count = 0;
 const keys = Array.from(document.querySelectorAll(".key"));
-
 keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
 window.addEventListener("keydown", playSound);
-record.addEventListener("click", () => playSoundAll(0, recordPlayArr));
-clearSound.addEventListener("click", () => clearPlayArr());
+
+document.addEventListener("click", function (event) {
+	let idButtons = event.target.dataset.toggleId;
+	if (idButtons === "buttonPlay" && recordPlayArr.length != 0) {
+		playSoundAll(recordPlayArr);
+	} else if (idButtons === "buttonClear") {
+		clearPlayArr();
+	}
+});
 
 function removeTransition(e) {
 	if (e.propertyName !== "transform") return;
@@ -18,24 +23,35 @@ function playSound(e) {
 	const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 	const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
 	if (!audio) return;
-	key.classList.add("playing");
-	recordPlayArr.push(`${e.keyCode}`);
-	audio.currentTime = 0;
-	audio.play();
+	if (!stopRecord) {
+		key.classList.add("playing");
+		recordPlayArr.push(audio);
+		audio.currentTime = 0;
+		audio.play();
+	}
 }
 
 let clearPlayArr = () => {
-	recordPlayArr = [];
+	recordPlayArr.length = 0;
+	stopRecord = 0;
 };
 
-let playSoundAll = (num, recordPlayArr) => {
-	let firstsound = num;
-	let audioRecord = document.querySelector(
-		`audio[data-key="${recordPlayArr[firstsound]}"]`
-	);
-	audioRecord.play();
-	num = firstsound + 1;
-	audioRecord.onended = function () {
-		playSoundAll(num, recordPlayArr);
-	};
+let playSoundAll = (recordPlayArr) => {
+	alert(++count);
+	if (recordPlayArr.length != 0) {
+		stopRecord = 1; //запретить ввод новых звуков
+		let firstsound = recordPlayArr.shift(); // удалить 1 звук
+		firstsound.play(); // включить 1 звук
+
+		if (recordPlayArr.length > 0) {
+			// если  звуки не закончились, то
+			firstsound.onended = function () {
+				//включить следующий
+				playSoundAll(recordPlayArr); // передаём новый массив звуков
+			};
+		} else {
+			stopRecord = 0; // разрешить ввод новых элементов
+			recordPlayArr.length = 0;
+		}
+	}
 };
