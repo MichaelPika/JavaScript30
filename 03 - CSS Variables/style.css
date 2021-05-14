@@ -1,9 +1,9 @@
 :root {
 	--base: #ffc600;
 	--spacing: 5px;
-	--blur: 10px;
+	--blur: 0;
 	--rounding: 10px;
-	--widthImage: 800px;
+	--widthImage: 600px;
 }
 
 img {
@@ -12,9 +12,13 @@ img {
 	filter: blur(var(--blur));
 	border-radius: var(--rounding);
 	width: var(--widthImage);
-	/* height: var(--widthImage); */
+	height: 100%;
 }
-
+.wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 .hl {
 	color: var(--base);
 }
@@ -34,6 +38,7 @@ body {
 
 .controls {
 	margin-bottom: 50px;
+	max-width: 100px;
 }
 
 input {
