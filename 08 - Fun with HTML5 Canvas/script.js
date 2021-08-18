@@ -1,3 +1,4 @@
+const controls = document.querySelector(".controls");
 const canvas = document.querySelector("#draw");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
@@ -38,13 +39,15 @@ canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", () => (isDrawing = false));
 canvas.addEventListener("mouseout", () => (isDrawing = false));
 
-function handleUpdate() {
-	if (this.id == "lineWidth") {
-		ctx.lineWidth = this.value;
-	} else {
-		ctx.strokeStyle = this.value;
-	}
-}
+controls.onchange = function (event) {
+	handleUpdate(event.target);
 
-const inputs = document.querySelectorAll(".controls input");
-inputs.forEach((input) => input.addEventListener("change", handleUpdate));
+	function handleUpdate(changeInput) {
+		switch (changeInput.id) {
+			case "lineWidth":
+				ctx.lineWidth = changeInput.value;
+			default:
+				ctx.strokeStyle = changeInput.value;
+		}
+	}
+};

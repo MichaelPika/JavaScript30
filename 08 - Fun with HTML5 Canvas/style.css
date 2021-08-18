@@ -1,13 +1,17 @@
 body {
+	margin: 0;
 	text-align: center;
 	background: #193549;
 	color: white;
 	font-family: "helvetica neue", sans-serif;
+	overflow: hidden;
 }
 
 .controls {
-	height: 160px;
+	position: absolute;
+	height: 120px;
 	border: solid 2px white;
+	background: rgb(177, 131, 131);
 }
 
 input {
