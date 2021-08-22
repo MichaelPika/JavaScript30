@@ -1,0 +1,257 @@
+[33mcommit c2401b47f587f98f3f42fdb3972605405c53e27d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/fun-with-html5-canvas[m[33m, [m[1;31morigin/feat-add-nav[m[33m, [m[1;32mfun-with-html5-canvas[m[33m, [m[1;32mfeat-add-nav[m[33m)[m
+Author: Mikhail Pryka <xauru7@gmail.com>
+Date:   Fri May 14 01:08:13 2021 +0300
+
+    feat: add keyboard navigation
+
+[33mcommit af8e3e27d6f5fca60688162f4f7974ac38a43297[m
+Author: Mikhail Pryka <xauru7@gmail.com>
+Date:   Sun May 9 22:34:42 2021 +0300
+
+    feat: add new files
+
+[33mcommit 311c5ea0f0b042036ef6ccd7de9136a3caeb97c3[m[33m ([m[1;31morigin/work[m[33m, [m[1;32mwork[m[33m)[m
+Author: Mikhail Pryka <xauru7@gmail.com>
+Date:   Sun May 9 22:27:34 2021 +0300
+
+    refactor: change style.css
+
+[33mcommit e79b703059442b57040f2604b5997d9f9c7dfee5[m
+Author: Mikhail Pryka <xauru7@gmail.com>
+Date:   Thu Apr 29 22:50:18 2021 +0300
+
+    refactor: change name of html file
+
+[33mcommit 2ea8f28bda3e9122270682abc47ddd8940be3e27[m
+Author: Mikhail Pryka <xauru7@gmail.com>
+Date:   Thu Apr 29 22:47:29 2021 +0300
+
+    feat: add record button
+
+[33mcommit 296d46a085388b783e2f252ff006e72e24a11f96[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: ce2c7e6 b87957c
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Wed Apr 7 13:53:39 2021 -0400
+
+    Merge pull request #454 from stiaannel/master
+    
+    Update readme.md
+
+[33mcommit b87957cc9209361f652d8a1ee3f262bac9939a84[m
+Author: Chris <57043253+stiaannel@users.noreply.github.com>
+Date:   Wed Apr 7 19:22:55 2021 +0200
+
+    Update readme.md
+
+[33mcommit ce2c7e630b0de1b63f4380888dcd529db7e711f1[m
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Thu Dec 17 09:49:23 2020 -0500
+
+    Update style.css
+
+[33mcommit 8fa8dd715572f7290275fa8bcbd454f29d232a04[m
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Thu Dec 17 09:46:52 2020 -0500
+
+    Add files via upload
+
+[33mcommit ac5ce1a3ccc2255cec56ad07cd9e233a83030fc4[m
+Merge: b21b66f 80ec671
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Tue Oct 20 09:56:16 2020 -0400
+
+    Merge pull request #406 from lillapulay/master
+    
+    Suggestion for 'people' array of day 4
+
+[33mcommit 80ec67114e6f244a823052f2b2ae795608725fc2[m
+Author: Lilla Pulay <pulaylilla@gmail.com>
+Date:   Tue Oct 20 15:49:35 2020 +0200
+
+    Mixed the order of items in the 'people' array
+    
+    The original order was the same at the solution to exercise 7 in the file, thus I think the difference couldn't be seen properly.
+
+[33mcommit bf1d9148c4e3a24463ad1de6c943fde83ef9ebeb[m
+Author: Lilla Pulay <pulaylilla@gmail.com>
+Date:   Tue Oct 20 15:45:10 2020 +0200
+
+    Mixed the order of items in the 'people' array
+    
+    The original order was the same at the solution to exercise 7 in the file, thus I think the difference couldn't be seen properly.
+
+[33mcommit b21b66ffda0675344deabd7f8202745535793f08[m
+Merge: 1afca64 50f2492
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Thu Sep 10 20:03:14 2020 -0400
+
+    Merge pull request #368 from novibonjovi/master
+    
+    Added quotes around background URL
+
+[33mcommit 1afca6447d6312f8e9266384eb6c53a6f726984d[m
+Merge: d6a3a6e d8f4cc5
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Thu Sep 10 20:02:21 2020 -0400
+
+    Merge pull request #373 from FriscoTony/tinyfix
+    
+    Changed broken header background image to suitable replacement from unsplash.com (foggy lake scene)
+
+[33mcommit d6a3a6eb2a4df0c3fb495b8eb5502c0e8ac2521f[m
+Merge: a584dc2 1a66a6f
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Thu Sep 10 20:01:31 2020 -0400
+
+    Merge pull request #379 from Eduardo06sp/master
+    
+    Fix sound not playing by lengthening audio file
+
+[33mcommit a584dc2d9ecef80d9379489a118d5bc8e98405dc[m
+Merge: b1f85a6 b23d144
+Author: Palash Mondal <palashm@live.in>
+Date:   Mon Aug 24 21:17:40 2020 +0530
+
+    Merge pull request #381 from gupta-ji6/master
+
+[33mcommit b23d1443adc9ba95272b578802bc311898ba403f[m
+Author: Ayush Gupta <ayushgupta197@gmail.com>
+Date:   Mon Aug 24 20:55:18 2020 +0530
+
+    Move the link to last index
+
+[33mcommit c24e6bdd78c0db19742364f05dcef7d628dbac02[m
+Author: Ayush Gupta <ayushgupta197@gmail.com>
+Date:   Mon Aug 24 18:49:19 2020 +0530
+
+    Add a link in community resource
+    
+    Added Ayush Gupta's implementation of JavaScript30 challenge with some add-ons & updated design.
+
+[33mcommit 1a66a6f1a5f8302fdb272cd4d70aa59cf78a44b7[m
+Author: Eduardo Pelaez Alvarado <eduardopelaez@pm.me>
+Date:   Tue Aug 4 23:56:08 2020 -0700
+
+    Fix sound not playing by lengthening audio file
+
+[33mcommit b1f85a6392d046e892a8ba4d3f236026185c55d1[m
+Author: Palash Mondal <palashm@live.in>
+Date:   Mon Jul 13 15:45:15 2020 +0530
+
+    docs: update few repo links
+
+[33mcommit d30e12610216f8136488a93efc1225e65451d0eb[m
+Merge: 97f59c2 891150d
+Author: Palash Mondal <palashm@live.in>
+Date:   Mon Jul 13 15:42:31 2020 +0530
+
+    Merge pull request #374 from RegusAl/patch-1
+    
+    Update readme.md
+
+[33mcommit 891150d9404c922053343bde1610d96a1c68c05b[m
+Author: Regus Albert <58109405+RegusAl@users.noreply.github.com>
+Date:   Mon Jul 13 11:57:21 2020 +0300
+
+    Update readme.md
+
+[33mcommit d8f4cc540be648f00b61355114e15d830e4f64d5[m
+Author: Tony Grant <tonygrant@gmail.com>
+Date:   Fri Jul 10 10:38:25 2020 -0700
+
+    Changed broken header background image to suitable replacement from unsplash.com (foggy lake scene)
+
+[33mcommit 50f2492fd75906bd296c76ad950e3fb83526c1b8[m
+Author: Novak <52179178+novibonjovi@users.noreply.github.com>
+Date:   Sat Jun 13 01:03:16 2020 +0200
+
+    Added quotes around background URL
+    
+    The background image did not show without the quotes around the URL.
+
+[33mcommit 97f59c236b39d602c5a914a8917dce20bc5fb2af[m
+Merge: 047370e d47e3a3
+Author: Palash Mondal <palashm@live.in>
+Date:   Sun May 31 19:12:37 2020 +0530
+
+    Merge pull request #366 from eshanvohra/patch-3
+    
+    Update readme.md
+
+[33mcommit d47e3a3cd760b371a1968c4cdcb8b0bce7d3c9b0[m
+Author: Eshan Vohra <48545439+eshanvohra@users.noreply.github.com>
+Date:   Sun May 31 12:53:21 2020 +0530
+
+    Update readme.md
+
+[33mcommit 047370e95001bc09a683d5ebdc250ae6e9efe4d8[m
+Merge: 6ad5a36 2d58e51
+Author: Palash Mondal <palashm@live.in>
+Date:   Mon May 25 18:35:42 2020 +0530
+
+    Merge pull request #361 from Mugilan-Codes/patch-1
+
+[33mcommit 2d58e51325d3547f8f8b68f2adc8b08f09a0e566[m
+Author: Mugilan <54710363+Mugilan-Codes@users.noreply.github.com>
+Date:   Mon May 25 14:31:24 2020 +0530
+
+    Updated my previous commit
+    
+    Updated and Moved my name to the last of the list
+
+[33mcommit 43029cc2517e64f1780f90ef6440def3d5514ff2[m
+Author: Mugilan <54710363+Mugilan-Codes@users.noreply.github.com>
+Date:   Fri May 22 22:49:36 2020 +0530
+
+    Add Mugilan's Solution
+    
+    Adding Mugilan's Solutions for the Challenge
+
+[33mcommit 6ad5a36e31518917807652e4e62fefe3199472fc[m
+Merge: c90bf52 5c513eb
+Author: Palash Mondal <palashm@live.in>
+Date:   Wed May 20 13:34:20 2020 +0530
+
+    Merge pull request #359 from ALMaclaine/master
+
+[33mcommit 5c513eb71c42d3dda6d7a02bbfd8a87fd529a54b[m
+Author: Alessandro Maclaine <almaclaine@gmail.com>
+Date:   Tue May 19 20:37:11 2020 -0700
+
+    add Dart 2.0 version
+    
+    add Dart 2.0 version
+
+[33mcommit c90bf52eb5d53b96709f4f9768cc0ee03e3631c5[m
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Tue May 19 15:22:13 2020 -0400
+
+    update snap location
+
+[33mcommit 1f1f6f5b2f2c00e401555df553368dddedfd3bee[m
+Author: Wes Bos <wesbos@gmail.com>
+Date:   Tue May 19 15:21:46 2020 -0400
+
+    Add snap locally
+
+[33mcommit 0653c6c9261bf58e3bd4fe7c4af77bc80c3b2183[m
+Merge: 58c27ef 1454b54
+Author: Palash Mondal <palashm@live.in>
+Date:   Tue May 5 15:51:05 2020 +0530
+
+    Merge pull request #353 from vanribeiro/master
+
+[33mcommit 1454b542f28df0d0fc554830f01e776acedb9cab[m
+Merge: a9e4639 58c27ef
+Author: Van Ribeiro <vanribeiro.dev@gmail.com>
+Date:   Tue May 5 01:05:08 2020 -0300
+
+    Merge branch 'master' into master
+
+[33mcommit a9e463933db67cba143ab7609127ee795b548c66[m
+Author: Vanessa Ribeiro <vanribeiro.dev@gmail.com>
+Date:   Tue May 5 00:59:07 2020 -0300
+
+    correct my info links.
+
+[33mcommit 9d6c8b705aa3321b59114886b816f4d2fc781931[m
