@@ -6,8 +6,8 @@ const progressBar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
-const brightnessSettings = document.querySelector(".brightnessButton");
-const brightness = document.getElementById("brightness");
+const settingsButton = document.querySelector(".settingsButton");
+const settingsAll = document.getElementById("settingsAll");
 const settings = document.getElementById("settings");
 /* Build out functions */
 function togglePlay() {
@@ -26,7 +26,11 @@ function skip() {
 }
 
 function handleRangeUpdate() {
-	video[this.name] = this.value;
+	if (this.name == "brightness") {
+		video.style.filter = "brightness(" + this.value + "%)";
+	} else {
+		video[this.name] = this.value;
+	}
 }
 
 function handleProgress() {
@@ -39,22 +43,11 @@ function scrub(e) {
 	video.currentTime = scrubTime;
 }
 
-function brightnessDisplay() {
-	if (brightness.style.display === "none") {
-		brightness.style.display = "block";
+function addDisplay() {
+	if (settingsAll.style.display === "none") {
+		settingsAll.style.display = "block";
 	} else {
-		brightness.style.display = "none";
-	}
-}
-function changeBrightness(e) {
-	if (e.target.id === "brightness60") {
-		video.style.filter = "brightness(60%)";
-	} else if (e.target.id === "brightness80") {
-		video.style.filter = "brightness(80%)";
-	} else if (e.target.id === "brightness100") {
-		video.style.filter = "brightness(100%)";
-	} else if (e.target.id === "brightness120") {
-		video.style.filter = "brightness(120%)";
+		settingsAll.style.display = "none";
 	}
 }
 /* Hook up the event listeners */
@@ -75,5 +68,4 @@ progress.addEventListener("click", scrub);
 progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
 progress.addEventListener("mousedown", () => (mousedown = true));
 progress.addEventListener("mouseup", () => (mousedown = false));
-brightnessSettings.addEventListener("click", brightnessDisplay);
-settings.addEventListener("click", changeBrightness);
+settingsButton.addEventListener("click", addDisplay);
