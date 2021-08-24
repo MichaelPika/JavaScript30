@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -17,7 +17,7 @@
 			></video>
 			<p></p>
 			<div class="speed">
-				<div class="speed-bar">1×</div>
+				<div class="speed-bar"></div>
 			</div>
 		</div>
 
@@ -25,27 +25,43 @@
 			const speed = document.querySelector(".speed");
 			const bar = speed.querySelector(".speed-bar");
 			const video = document.querySelector(".flex");
+			let speedFlag = 0;
+			const minSpeed = 0.4;
+			const maxSpeed = 4;
 
 			function handleMove(e) {
-				const y = e.pageY - this.offsetTop;
-				const percent = y / this.offsetHeight;
-				const min = 0.4;
-				const max = 4;
-				const height = Math.round(percent * 100) + "%";
-				const playbackRate = percent * (max - min) + min;
-				bar.style.height = height;
-				bar.textContent = playbackRate.toFixed(2) + "×";
-				video.playbackRate = playbackRate;
+				if (!speedFlag) {
+					const y = e.pageY - this.offsetTop;
+					const percent = y / this.offsetHeight;
+					const height = Math.round(percent * 100) + "%";
+					const playbackRate = percent * (maxSpeed - minSpeed) + minSpeed;
+					bar.style.height = height;
+					bar.textContent = playbackRate.toFixed(2) + "×";
+					video.playbackRate = playbackRate;
+				}
 			}
-
 			setNormalSpeed = (e) => {
 				video.playbackRate = 1;
-				bar.style.height = "17%";
-				bar.textContent = "1×";
+				percent = (video.playbackRate - minSpeed) / (maxSpeed - minSpeed);
+				bar.style.height = Math.round(percent * 100) + "%";
+				bar.textContent = video.playbackRate.toFixed(2) + "×";
+			};
+
+			setSpeed = (e) => {
+				speedFlag = 1;
+				const y = e.pageY - this.offsetTop;
+				const percent = y / this.offsetHeight;
+				video.playbackRate = percent * (maxSpeed - minSpeed) + minSpeed;
+			};
+
+			clearFlag = (e) => {
+				speedFlag = 0;
 			};
 
 			speed.addEventListener("mousemove", handleMove);
-			speed.addEventListener("click", setNormalSpeed);
+			speed.addEventListener("click", setSpeed);
+			speed.addEventListener("dblclick", setNormalSpeed);
+			video.addEventListener("mouseout", clearFlag);
 		</script>
 	</body>
 </html>
