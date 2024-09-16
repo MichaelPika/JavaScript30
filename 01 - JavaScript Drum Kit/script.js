@@ -7,11 +7,11 @@ window.addEventListener("keydown", playSound);
 
 document.addEventListener("click", function (event) {
 	let idButtons = event.target.dataset.toggleId;
-	if (idButtons === "buttonPlay" && recordPlayArr.length != 0) {
+	if (idButtons === "buttonPlay") {
 		playSoundAll(recordPlayArr);
 	} else if (idButtons === "buttonClear") {
 		clearPlayArr();
-	}
+	} else return;
 });
 
 function removeTransition(e) {
@@ -37,21 +37,20 @@ let clearPlayArr = () => {
 };
 
 let playSoundAll = (recordPlayArr) => {
-	alert(++count);
 	if (recordPlayArr.length != 0) {
-		stopRecord = 1; //запретить ввод новых звуков
-		let firstsound = recordPlayArr.shift(); // удалить 1 звук
-		firstsound.play(); // включить 1 звук
-
+		stopRecord = 1;
+		let firstsound = recordPlayArr.shift();
+		firstsound.play();
 		if (recordPlayArr.length > 0) {
-			// если  звуки не закончились, то
 			firstsound.onended = function () {
-				//включить следующий
-				playSoundAll(recordPlayArr); // передаём новый массив звуков
+				if (stopRecord != 0) {
+					playSoundAll(recordPlayArr);
+				}
 			};
 		} else {
-			stopRecord = 0; // разрешить ввод новых элементов
+			stopRecord = 0;
 			recordPlayArr.length = 0;
 		}
 	}
+	return;
 };
